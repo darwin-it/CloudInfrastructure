@@ -1,0 +1,248 @@
+https://421774479323.signin.aws.amazon.com/console
+
+Available Demo list December 2019
+---------------------------------
+2a	AWS Login and Explore, pin, regions
+2b	Lookup your user settings within IAM
+3.	S3 (Simple Storage Service)	plus cloudberry
+4.	Virtual Private Cloud
+5.	EC2 Bastion Host and Application Sever as1
+6.	RDS	
+
+7.	AWS Command Line Interface CLI
+8.	EC2: AMI’s and another Orangehrm application server	plus AMI
+9.	LoadBalancing
+10.	Resource Groups	and tagging
+11.	EFS
+Plus (90% ready)
+.Cost Estimators
+Plus (50% ready)
+.CloudFormation use an existing template json/yaml file
+Plus (0% ready)
+.IAM only resources within Frankfurt
+.Terraform
+
+Soest- Rotterdam Alexander
+07:02 08:01 ov-Fiets ??? om 08:00? anders 20 min. lopen
+07:32 08:32
+
+Todo list for NN 13-01-2020
+---------------------------
+Voor 1-1-2020
+. Create a windows AMI - which one
+. Bastionhost (Windows) plus following software
+  Windows AMI aan met onderstaande software 
+  . 5hart user met administrator rechten
+  . Chrome
+  . MobaXterm
+  . Notepad++
+  . TotalCommander
+  . CloudBerry
+  . SQLDeveloper+mysql.jar
+. Create vpc and subcomponents
+. Create windows bastion host based on the AMI
+. Create/verify de As1
+  bitnami-orangehrm-4.0-2-r08-linux-debian-9-x86_64-hvm-ebs ami-021af219e4b4630ac (admin/root)
+  bitnami-orangehrm-3.3.2-3-r28-linux-ubuntu-14.04.3-x86_64-hvm-ebs ami-d8ae55b7 (ubuntu)
+. create/verify de rds
+
+. Weekend van 11+12 jan
+Lab Doc
+. clean-up all yellow marks
+. Split the lab doc after RDS and rename the latter day 2
+ppt
+. plaatjes voor de practices
+.. Aanmaken NN users in AWS account
+Iris.bakker@nn.nl
+Robert.jan.opschoor@nn.nl
+Peter.doornbos@nn.nl
+Leontine.dekker@nn-group.com
+Niels.toussaint@nn.nl
+Peter.vlug@nn.nl
+. Check WIFI bij bcn 
+
+v. Programma Opstellen en rond mailen na bevestiging van Jan Struik, zie draft
+  kind reminder voor Jan Struik opstellen
+. rename through the document Copy of fbVanillaAWSResources4NN.io
+. 
+v. Verplaats cloudberry practice naar bastionhost chapter
+.. Edit the 4.1	Apply your changes to the vanilla design in draw.io section to reflect multiple VPC's
+
+
+bucketname
+.. keys
+.. draw.io
+
+. Ophogen service limits vpc's naar 10 en eip
+
+Verify access rights with fbr@xs4all.nl 
+. Admin rights for s3, etc
+  Tunneling as an extra option - dus naar achteren verplaatsen
+. Drawing for one vpc per attendee - certainy an option - see also https://www.ipaddressguide.com/cidr
+  10.10.0.0/16
+  10.10.0.0/24 (subnet)
+  10.20.0.0/16
+  10.20.0.0/24
+. 5 VPC's per region - can increase certainly an option 
+. eip's also 5 per region 
+. Create Practice Cost Estimator right after RDS 
+  V1 and V2
+  . Add slides for Cost Estimator
+   . EC2 
+   . RDS 
+   . S3 another cost estimator
+   . VPC costs 
+  https://calculator.aws/#/ calculator/estimator same thing
+  https://calculator.s3.amazonaws.com/index.html 
+  
+ 
+. Evaluate the drawing practice to draw all the components - at the beginning of each practice with draw.io after S3
+  To reflect the naming and IP ranges - starting with
+  The drawing must be like 
+  2nd Practice after exploring the AWS console
+v. Evaluate Chapter 5 - unique pvc's - correct drawings
+  Share the VPC and the public Subnet
+  rename all exsiting drawings aligned with the chapters
+  Add NAT route tables for the priv subnets
+. Revise practice around orangehrm - take the ami's below
+  Diff between hvm en paravirtual as in virtualization)
+  https://minops.com/blog/2014/07/paravirtual-vs-hvm-images/ long answer - hvm seems newer
+. What the AMI of the original AMI orangehrm - with a local database
+  bitnami-orangehrm-4.0-2-r08-linux-debian-9-x86_64-hvm-ebs ami-021af219e4b4630ac (admin/root)
+  bitnami-orangehrm-3.3.2-3-r28-linux-ubuntu-14.04.3-x86_64-hvm-ebs ami-d8ae55b7 (ubuntu)
+v. Add limits table to lab - different UI make a copy
+  Wat are the limits per AWS resource add a table
+  Are there max default 1920 vCPU per account
+. Verstuur software request naar ict@bcn.nl prior tot de training - na antwoord van Rik
+  Revise the S3 chapter
+  . add bucket/folder/file/ (rename the file)
+  . add Screen shots for draw-io in lab doc
+. Summary slide what are take aways of this day
+.. Huge amount of services - There are many choises to configure a specific services
+.. Services are rarely alone - they are highly independent
+.. Think (design) before you act (implement)
+.. Very easy/fast to create service - but what about costs?
+.. We are using the Console - but there are other (more efficient) ways to manage AWS services (CloudFormation, Terraform)
+
+. Preso in stukken hakkken
+  . Dan een slide deck over AWS Console, S3, VPC, EC2 en RDS en Cost Estimator (laatste toevoegen aks practice)
+  . Plaatjes voor de practices - Draw.io Drawings??
+. Pre-Req: eigen laptop dan extra software icw tunneling (as extra option)
+  MobaXterm, CloudBerry, SQLDeveloper plus een plug-in welke is de laatste?
+  dmv links te downloaden op eigen laptop dan wel (Windows BastionHost)
+. Setup of accounts and the usage of multiple VPC's - not enough service limits
+  50 ec2 instances per attendee: 5 instances 44 left (max 8 deelnemers when account is empty)
+  max 5 VPC's per region
+  see also https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html
+  including the associated access rights
+
+
+. add an iam practice only allowed to 
+
+v. Testing of a 2nd vpc with the same CIDR's any ip conflicts? across vpc's? absolutely!
+  Within a region you cannot have private subnets with exactly same CIDR's accross VPC's!
+  You are blocked on the subnet cidr range - all within Frankfurt
+  1st fbvpc; fbprivsnas1; 10.0.1.0/24; eu-central-1a 
+  IP address: 10.0.1.204
+  2nd fb2pvs; fb2privsn; 10.0.1.0/24; eu-west-1a
+  10.0.1.204
+  ->CIDR Address overlaps with existing Subnet CIDR: 10.0.1.0/24
+  The following CIDR 10.0.2.0/24 does work
+   What would be a different exercise?
+  Whitin the same vpc per student
+  . Create a single public subnet igw and NAT
+  . creating seperate as route tables per student to allow outgoing internet trafic (max 200) (the NAT association)
+  . Creating seperate private subnets (max 200) each with a different CIDR 10.0.2.0/24 with different 
+    10.10.x.0;10.20.x.0;10.30.x.0 etc for each student
+  . Creating seperate security groups (max 500)
+  . Creating seperate instances each in their own subnet (max 20 per account cross region?)
+  . Creating seperate loadbalancers (max 50)
+  Other limits
+  . 5000 network interfaces
+  or Within different regions
+  . vpc's with subnets with the same CIDR's
+  . Instances with same private ip's - they do not conflict
+  . risk that all not ami's are available
+. Slide deck for the 1st day based on latest kpnfriducation
+. Remove all 2nd day chapters (thus all chapters after CLI)
+
+Subject 1st day: intro, AWS console, S3, VPC, BH, AS1, RDS
+----------------------------------------------------------
+2nd day subjects
+. All unfinished subjects
+. CLI
+. 2nd As
+. LB
+. Resource groups
+. EFS
+. IAM - when required add before EFS
+  No practices around IAM yet
+  Add policy that only resources can be created within the Frankfurt region
+Additional subjects
+. Cost estimator
+  for your windows, linux, LB, VPC, EFS
+  
+  CloudFormation vpc with private and public subnets and multiple security groups->
+  to be created template based on existing resources - does not work with current portfolio - through cloudformer beta
+
+See also https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-cloudformer.html
+Step 1 Create a cloudformer template (default vpc or new vpc is not clear) - may take a while note that the cloudformer is still beta (04)
+       AWS CloudFormer Beta - template creation prototype application. This tool allows you to create an AWS CloudFormation template
+       You will use the cloudformer sample template 
+       This will result in https://ec2-35-158-123-130.eu-central-1.compute.amazonaws.com on a seperate instance 
+	   This url is visible within the output tab when finished
+       If you delete this instance you will also loose the capability to create the actual template
+Step 2 Launching above url https://ec2-35-158-123-130.eu-central-1.compute.amazonaws.com 
+       Wizard like interface that allows you to pick your already created resources - except eni's?
+       This will result in the actual template (json file) based upon the selections - the result json will be stored in S3
+	   It did not show all all eni network interfaces? because step 1 was not complete?
+Step 3 Running the actual template - in principle all resources will be created
+       Note that were no selections like instance types for ec2 instances - all your resource naming were hardcoded?
+	   The execution failed: 
+	   The following resource(s) failed to create: [volumevol071cdbd95b3b1b1bb, 
+	   volumevol048a5d385d7d8eef1, volumevol0fa1db01f185e4774, acl504eb13a, dopta99fbdc2, igw01e08344939dadcbd, s3awsbucketfb19092019, 
+	   dbsgdefault, topicdynamodb, vpc0e540710db97f3311, volumevol0e4fd35978978c8ba, volumevol00bd994f62c0e5998, eip312021567, 
+	   volumevol0eb9ccd7283b739ee]. . Rollback requested by user.
+       14:54:44 UTC+010 CREATE_FAILED	AWS::RDS::DBSecurityGroup dbsgdefault DBSecurityGroup is not supported in this region
+	   2nd round - 
+	   . choose only vpc like objects
+	   . Change the naming fb into fb2 to circumvent naming conflicts
+	   . upload the changed json
+	   . rerun with modified json
+	   2nd run failed as well
+	   	The following resource(s) failed to create: [subnet09edf43135ad02130, subnet025b1df6e26093372, sgfb2secgrplb, subnet0b70464fa88d241a0, 
+		subnet06192917a8f2ca332, sgfb2secgrpas, route2, sgfb2secgrpefs, gw1, subnet00146f45bd008b138, subnet011f881c2cd429b36, 
+		sgfb2secgrpbh, sgfb2secgrprds]. . Rollback requested by user.
+        Physical ID:arn:aws:cloudformation:eu-central-1:421774479323:stack/my2ndcloudformationstack/71646080-1124-11ea-86e6-0a233b5d9d4c
+        Client Request Token:Console-CreateStack-423a90a8-9bf2-42ed-9780-545b10476aeb
+		Exactly one of [NatGatewayId, GatewayId, NetworkInterfaceId, TransitGatewayId, InstanceId, EgressOnlyInternetGatewayId, 
+		VpcPeeringConnectionId] must be specified and not empty
+		Only create vpc, subnets and security groups with template
+		remove igw, dhcpoptions, nat, eip and route tables (igw, nat and local) 
+		Add eip, nat igw and route tables post
+. How to add additional EBS storage in windows 
+   called virtual hard disk (create/attach)
+   requires a location ?? what about a drive letter
+
+Questionnaire
+-------------
+1. Can you have the same local ip adress across multiple vpc's within the same tenant?
+   Test noop
+   v. Test a 2nd vpc with the same CIDR's any ip conflicts? across vpc's?
+  You are blocked on the subnet cidr range - all within Frankfurt
+  1st fbvpc; fbprivsnas1; 10.0.1.0/24; eu-central-1a
+  2nd fb2pvs; fb2privsn; 10.0.1.0/24; eu-central-1a: 
+  CIDR Address overlaps with existing Subnet CIDR: 10.0.1.0/24
+  The following CIDR 10.0.2.0/24 does work
+  or change to different region
+2. Difference between an account and a user?
+3. As a developer no access rights to iam
+   what access rights do I require?
+   no access right to generate keys within my security credentials
+   Extended with efs, vpc, rds and S3 Full access rights
+4. There is no recording of efs and instances within the AWS console??   
+5. Does efs require a security group itself ??? may be not?? 
+
+With CLI you require 
+d.	Access key ID: AKIAJG7RI7YIPLFNZEBQ
+e.	Secret Access key: 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
