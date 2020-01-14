@@ -63,39 +63,6 @@ Demo-practice list NN13-01-2020
 8.1	AWS Cost Estimator version 1	91
 8.2	AWS Cost Estimator version 2	98
 
-Weekend van 11+12 jan
----------------------
-Iris.bakker@nn.nl
-xmUT_&wf-)sb
-AKIAWEM5XZ7NXL3RCJWA
-Dgh4pAFIEiIgNG7xR1/iBsUhJ6vE+UfuO/9QiLjX
-
-Robert.jan.opschoor@nn.nl
-VB'uW}C+$386
-AKIAWEM5XZ7N3ACCPNXJ
-n/apk0X9BeTsnZewiBUhPbZq0niwiMnUnV+c9/es
-
-Peter.doornbos@nn.nl
-99jK}f55(8|-
-AKIAWEM5XZ7N6ZGRDBU3
-a5K/zQMKM8yyteaxeZNaSs6FFd4iiv//yeRKitGA
-
-Leontine.dekker@nn-group.com
-!k|eLZS_*VG@
-AKIAWEM5XZ7NVHIIKVFP
-93qvJFV2o10Z8Bf9P3FuqFjajxsOpONA8bwhU+ev
-
-Niels.toussaint@nn.nl
-J6wUmt%XrwId
-AKIAWEM5XZ7N3HT4UH67
-ADDZr3lh5nIvs6/02HuAFvLs/AOwDDpOhBugCk1K
-
-Peter.vlug@nn.nl
-v}w6Z0WE9%hY
-AKIAWEM5XZ7N5Q35W7TO
-QRhQYBf7uWsIcEAohp1Vo8RULEp/L1j2i/DGwH8i
-
-
 Questionnaire
 -------------
 . why is the NAT rt main?
