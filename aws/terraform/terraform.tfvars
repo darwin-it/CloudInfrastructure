@@ -1,0 +1,16 @@
+region    = "eu-central-1"
+profile   = "default"
+key_name  = "fbkeypair" 
+cidrs     = ["10.0.0.0/16", "10.1.0.0/16"]
+az1a      = "eu-central-1a"
+az1b      = "eu-central-1b"
+az1c      = "eu-central-1c"
+my_ip     = ["62.251.83.160/32"]
+vpc_cidr   = "10.90.0.0/16"
+pubsn_cidr = "10.90.0.0/24"
+privsnas1_cidr = "10.90.1.0/24"
+privsnas2_cidr = "10.90.2.0/24"
+privsnrds1_cidr = "10.90.3.0/24"
+privsnrds2_cidr = "10.90.4.0/24"
+pre_fix = "fb_"
+vpc_name = "fb_vpc"
